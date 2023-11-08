@@ -44,6 +44,8 @@ function checkChar(char) {
   }
 }
 
+
+
 function answer(word) {
   let str = word;
   let len = str.length;
@@ -57,8 +59,7 @@ function answer(word) {
   }
   console.log(temp);
 
-  return temp == word
+  return temp == word;
 }
-
 
 module.exports = answer;
