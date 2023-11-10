@@ -1,5 +1,6 @@
 const answer = require("./app");
 let arr = [1, 2, 3, 4, 5, 6, 7];
+let temp = [1, 2, 3, 4, 5, 6, 7];
 
 function swap(a, b, arr) {
   let temp;
@@ -8,14 +9,10 @@ function swap(a, b, arr) {
   arr[b] = temp;
 }
 
-let rand;
+let rand = 3;
 
-function shuffler(lower_bound , upper_bound) {
-  for (let i = lower_bound; i <= upper_bound; i++) {
-    arr.push(i);
-  }
-
-  rand = 4;;
+function shuffler() {
+  console.log(rand);
   let firstPtr = 0;
   let secondPtr = rand;
   while (firstPtr < arr.length && secondPtr < arr.length) {
@@ -28,13 +25,10 @@ function shuffler(lower_bound , upper_bound) {
   }
 }
 
-shuffler(1 , 7);
-console.log(rand);
-// console.log('working');
+shuffler(1, 7);
 
-console.log(answer(1 , 7 , rand));
 describe("answer", () => {
   it("to life the universe and everything", () => {
-    expect(answer(1, 7)).toEqual(arr);
+    expect(answer(3)).toEqual([4, 5, 6, 7, 2, 3, 1]);
   });
 });
