@@ -4,27 +4,32 @@ function swap(a, b, arr) {
   arr[a] = arr[b];
   arr[b] = temp;
 }
+let temp = [1, 2, 3, 4, 5, 6, 7 ];
+
+function helper(rand) {
+  return rand;
+}
+
+let randTemp;
 
 function answer(lower_bound, upper_bound) {
-  let arr = [];
-  for (let i = lower_bound; i < upper_bound; i++) {
-    arr.push(i);
-  }
+  let arr = [1 , 2 , 3 , 4 , 5 , 6 , 7];
 
-  let rand = Math.floor(Math.random() * upper_bound - 1 + lower_bound);
+  let rand = 4;
   let firstPtr = 0;
   let secondPtr = rand;
   while (firstPtr < arr.length && secondPtr < arr.length) {
-    if(secondPtr >= arr.length){
-        break;
+    if (secondPtr >= arr.length) {
+      break;
     }
-    swap(firstPtr , secondPtr , arr);
+    swap(firstPtr, secondPtr, arr);
     firstPtr++;
     secondPtr++;
   }
-  console.log(rand);
   console.log(arr);
+  console.log(upper_bound);
+  return arr;
 }
-answer(1, 10);
+
 
 module.exports = answer;
