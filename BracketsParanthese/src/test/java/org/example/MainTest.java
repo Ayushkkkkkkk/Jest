@@ -9,8 +9,9 @@ class MainTest {
     @Test
     void answer() {
         String str = "{{{{}}}}";
-        boolean expected = true;
-        boolean actual = Main.answer(str);
+        String str1 = "{{{{{{{{{))))))))}}}}}}}}}";
+        boolean expected = false;
+        boolean actual = Main.answer(str1);
         assertEquals(expected , actual);
     }
 }
